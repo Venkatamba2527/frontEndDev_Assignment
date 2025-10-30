@@ -1,36 +1,35 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
 require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const { connectDB } = require('./config/db');
+const errorHandler = require('./middleware/errorHandler'); // ✅ add this import
 
-// Import routes
 const authRoutes = require('./routes/authRoutes');
-//const userRoutes = require('./routes/userRoutes'); // optional, only if you have it
+const userRoutes = require('./routes/userRoutes');
+const taskRoutes = require('./routes/taskRoutes');
 
 const app = express();
 
-// ✅ Middlewares
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// ✅ Routes
+// Connect MongoDB
+connectDB();
+
+// Health check route
+app.get('/api/health', (req, res) => res.json({ status: 'OK', timestamp: new Date() }));
+
+// Optional root route (so browser shows something)
+app.get('/', (req, res) => res.send('✅ Task Manager API is running...'));
+
+// Routes
 app.use('/api/auth', authRoutes);
-//app.use('/api/user', userRoutes); // protected routes (optional)
+app.use('/api/user', userRoutes);
+app.use('/api/tasks', taskRoutes);
 
-// ✅ Database connection
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log('✅ MongoDB Connected'))
-  .catch((err) => console.error('❌ MongoDB connection error:', err));
+// Error Handler (must be last)
+app.use(errorHandler);
 
-// ✅ Default route
-app.get('/', (req, res) => {
-  res.send('Welcome to the API!');
-});
-
-// ✅ Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
