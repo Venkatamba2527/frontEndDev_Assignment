@@ -1,20 +1,20 @@
-// src/components/HomePage.jsx
+
 import React from 'react';
 import { CheckCircle, Rocket, Users, Shield, ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/20">
-      {/* Hero Section */}
+
       <div className="relative overflow-hidden">
-        {/* Background Elements */}
+
         <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-slate-800/20"></div>
 
-        {/* Navigation */}
+       
         <nav className="relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
-              {/* Logo */}
+           
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <CheckCircle className="w-5 h-5 text-white" />
@@ -24,7 +24,7 @@ export default function HomePage() {
                 </h1>
               </div>
 
-              {/* Auth Links */}
+            
               <div className="flex items-center gap-4">
                 <a
                   href="/login"
@@ -43,10 +43,10 @@ export default function HomePage() {
           </div>
         </nav>
 
-        {/* Main Hero Content */}
+    
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="text-center">
-            {/* Badge */}
+          
             <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200/50 dark:border-gray-700/50 rounded-full px-4 py-2 mb-8">
               <Rocket className="w-4 h-4 text-blue-600" />
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -54,7 +54,7 @@ export default function HomePage() {
               </span>
             </div>
 
-            {/* Main Heading */}
+       
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               Organize Your
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -62,7 +62,7 @@ export default function HomePage() {
               </span>
             </h1>
 
-            {/* Subtitle */}
+        
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               A modern task management application designed to help you focus on what matters most.
               <span className="block text-lg text-gray-500 dark:text-gray-400 mt-2">
@@ -70,7 +70,6 @@ export default function HomePage() {
               </span>
             </p>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <a
                 href="/signup"
@@ -87,7 +86,7 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Stats */}
+       
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">99%</div>
@@ -106,7 +105,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Features Section */}
       <div className="relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-md border-t border-gray-200/50 dark:border-gray-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
@@ -119,7 +117,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
+           
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-2xl p-8 shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
                 <CheckCircle className="w-6 h-6 text-white" />
@@ -130,7 +128,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Feature 2 */}
+           
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-2xl p-8 shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-white" />
@@ -141,7 +139,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Feature 3 */}
+     
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-2xl p-8 shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-white" />
@@ -155,7 +153,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Footer */}
+
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
