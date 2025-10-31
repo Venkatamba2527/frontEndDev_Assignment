@@ -1,14 +1,14 @@
 const express = require('express');
 const { register, login } = require('../controllers/authController');
 const { registerValidation, loginValidation } = require('../validations/authValidations');
-const authenticateToken = require('../middleware/jwtAuth'); // Add this import
-const User = require('../models/User'); // Add this import
+const authenticateToken = require('../middleware/jwtAuth');
+const User = require('../models/User');
 const router = express.Router();
 
 router.post('/register', registerValidation, register);
 router.post('/login', loginValidation, login);
 
-// Add this route for getting current user profile
+
 router.get('/me', authenticateToken, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
