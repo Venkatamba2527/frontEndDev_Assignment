@@ -16,7 +16,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen dark-enhanced-bg-gradient">
-      {/* Enhanced Header */}
+    
       <header className="dark-glass-effect border-b border-white/5 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -54,14 +54,13 @@ export default function Dashboard() {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Sidebar - Profile & Stats */}
           <div className="lg:col-span-1 space-y-6 lg:space-y-8">
             <Profile />
 
-            {/* Quick Stats */}
+      
             <div className="dark-glass-effect rounded-2xl p-6 border border-white/5">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-green-400" />
@@ -83,7 +82,6 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Productivity Tip */}
             <div className="dark-glass-effect rounded-2xl p-6 border border-white/5">
               <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                 <Clock className="w-5 h-5 text-purple-400" />
@@ -95,7 +93,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Main Content - Tasks */}
+  
           <div className="lg:col-span-3">
             <TaskList />
           </div>
