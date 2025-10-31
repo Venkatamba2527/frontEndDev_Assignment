@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/profile', authenticateToken, getProfile);
 router.put('/profile', authenticateToken, updateProfile);
 
-// NEW – used by AuthContext on page load
-router.get('/me', authenticateToken, getProfile);   // ← add this
+
+router.get('/me', authenticateToken, getProfile); 
 
 module.exports = router;
